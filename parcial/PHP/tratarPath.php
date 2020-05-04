@@ -184,19 +184,33 @@ function tratarVentas($header , $request)
             if($header != null)
             {
                 $usuario = jwtClass::autenticarToken($header);
-                if($usuario != false && isset($usuario->nombre) && isset($usuario->clave))
+                if($usuario != false && isset($usuario->email) && isset($usuario->clave))
                 {
-                    $usuarioValidado = Usuario::validar($usuario->nombre,$usuario->clave);// ver esto
+                    $usuarioValidado = Usuario::validar($usuario->email,$usuario->clave);// ver esto
                     if( is_a($usuarioValidado,"Usuario"))
                     {
-                        $path = dirname(__DIR__,1).'/archivos/ventas.xxx';
-                        if($usuarioValidado->tipo == 'user')
+                        $path = dirname(__DIR__,1).'/archivos/ventas.txt';
+                        if($usuarioValidado->tipo == 'cliente')
                         {
-                            $ventasUsuario = Ventas::filtarVentas($path,$usuarioValidado->id);
+                            $ventasUsuario = Ventas::filtarVentas($path,$usuarioValidado->email);
                             return Retorno::armarRetorno(true,"","",null,json_encode($ventasUsuario));
-                        }else if ($usuarioValidado->tipo == 'admin')
+                        }else if ($usuarioValidado->tipo == 'encargado')
                         {
-                            return Retorno::armarRetorno(true,"","",null,json_encode(Archivo::Leer($path)));
+                            $ventas =Archivo::Leer($path);
+                            $cantidad = 0;
+                            $total = 0;
+                            foreach($ventas as $venta)
+                            {
+                                if(is_a($venta,'Ventas'))
+                                {
+                                    $cantidad = $cantidad +1;
+                                    $total = $venta->precioTotal + $total;
+                                }
+                            }
+                            $retorno = stdClass();
+                            $retorno->catidad = $cantidad;
+                            $retorno->total = $total;
+                            return Retorno::armarRetorno(true,"","",null,json_encode($retorno));
                         }
                     }else
                     {

@@ -1,3 +1,4 @@
 O:8:"Producto":6:{s:4:"tipo";s:5:"molde";s:6:"precio";s:3:"100";s:5:"stock";s:3:"500";s:5:"sabor";s:5:"jamon";s:4:"foto";s:53:"C:/xampp/htdocs/parcial/imagenes/1_1588633194_php.jpg";s:2:"id";i:1;}
 O:8:"Producto":6:{s:4:"tipo";s:5:"molde";s:6:"precio";s:3:"100";s:5:"stock";s:3:"500";s:5:"sabor";s:4:"napo";s:4:"foto";s:53:"C:/xampp/htdocs/parcial/imagenes/2_1588633300_php.jpg";s:2:"id";i:2;}
 O:8:"Producto":6:{s:4:"tipo";s:6:"piedra";s:6:"precio";s:3:"100";s:5:"stock";s:3:"500";s:5:"sabor";s:4:"napo";s:4:"foto";s:53:"C:/xampp/htdocs/parcial/imagenes/3_1588633340_php.jpg";s:2:"id";i:3;}
+O:8:"Producto":6:{s:4:"tipo";s:6:"piedra";s:6:"precio";s:3:"100";s:5:"stock";s:3:"500";s:5:"sabor";s:5:"jamon";s:4:"foto";s:53:"C:\xampp\htdocs\parcial/imagenes/4_1588636102_php.jpg";s:2:"id";i:4;}

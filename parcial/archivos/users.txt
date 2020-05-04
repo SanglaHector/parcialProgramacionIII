@@ -1,2 +1,3 @@
 O:7:"Usuario":4:{s:5:"email";s:22:"sanglahector@gmail.com";s:2:"id";i:1;s:5:"clave";s:9:"123456789";s:4:"tipo";s:9:"encargado";}
 O:7:"Usuario":4:{s:5:"email";s:14:"guni@gmail.com";s:2:"id";i:1;s:5:"clave";s:9:"123456789";s:4:"tipo";s:7:"cliente";}
+O:7:"Usuario":4:{s:5:"email";s:16:"sangla@gmail.com";s:2:"id";i:2;s:5:"clave";s:9:"123456789";s:4:"tipo";s:7:"cliente";}
