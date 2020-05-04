@@ -1,0 +1,1 @@
+O:6:"Ventas":7:{s:10:"idProducto";i:1;s:8:"cantidad";i:1;s:11:"precioTotal";i:100;s:5:"fecha";i:1588635508;s:9:"idUsuario";s:14:"guni@gmail.com";s:4:"tipo";s:5:"molde";s:5:"sabor";s:5:"jamon";}
