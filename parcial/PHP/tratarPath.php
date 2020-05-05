@@ -207,7 +207,7 @@ function tratarVentas($header , $request)
                                     $total = $venta->precioTotal + $total;
                                 }
                             }
-                            $retorno = stdClass();
+                            $retorno = new stdClass();
                             $retorno->catidad = $cantidad;
                             $retorno->total = $total;
                             return Retorno::armarRetorno(true,"","",null,json_encode($retorno));
